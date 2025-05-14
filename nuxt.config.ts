@@ -4,7 +4,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: false },
-  ssr: false,
+  ssr: true,
   spaLoadingTemplate: false,
 
   // ========== START:: APP CONFIGURATIONS ========== //
@@ -39,7 +39,6 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxtjs/tailwindcss",
-    "socket.io-client",
     [
       "@pinia/nuxt",
       {
@@ -91,11 +90,10 @@ export default defineNuxtConfig({
       },
     ],
 
-    "nuxt-swiper",
     "@nuxt/image",
   ],
 
-  swiper: {},
+  
 
   plugins: [
     {
@@ -104,7 +102,6 @@ export default defineNuxtConfig({
     },
 
     "~/plugins/i18n.client.ts",
- 
 
     {
       src: "~/plugins/vue-google-maps.client.ts",

@@ -70,7 +70,6 @@
 
 <script setup>
 import { useField } from "vee-validate";
-import { toast } from "vue3-toastify";
 
 const props = defineProps({
   accept: { required: false },

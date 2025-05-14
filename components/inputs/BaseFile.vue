@@ -88,7 +88,6 @@
 <script setup>
 import axios from "axios";
 import { useField } from "vee-validate";
-import { toast } from "vue3-toastify";
 import image1 from "@/assets/media/pdf.png";
 const props = defineProps({
   accept: { required: false },
