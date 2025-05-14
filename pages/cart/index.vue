@@ -23,7 +23,7 @@
                 :key="item.id"
                 class="p-3 border border-secondaryTheme rounded-[10px] flex justify-between items-center"
               >
-                <div class="flex gap-4 items-center">
+                <div v-if="item?.product" class="flex gap-4 items-center">
                   <div class="w-[130px] h-[120px]">
                     <img
                       :src="item?.product?.product_image"
