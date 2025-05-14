@@ -1,0 +1,127 @@
+// ::-webkit-scrollbar {
+//   @apply w-1.5;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   @apply bg-[#f6f6fd];
+// }
+
+/* Handle */
+// ::-webkit-scrollbar-thumb {
+//   @apply rounded-lg bg-primary;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   @apply bg-primaryOpacity30;
+
+
+// }
+* {
+  // font-family: "ArbFONTS-Somar-Regular";
+  outline: none;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: background 0.4s linear, color 0.4s linear;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  -webkit-scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-lighterGray;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--main_theme_clr);
+  border: 2px solid var(--main_theme_clr);
+  border-radius: 15px;
+}
+body .theme--light.v-application {
+  @apply bg-themeInputs text-themeText;
+}
+body .main-content {
+  position: relative;
+  z-index: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -o-box-shadow: 0 0 0 30px var(--theme_inputs_clr) inset !important;
+  box-shadow: 0 0 0 30px var(--theme_inputs_clr) inset !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.fade-in {
+  animation: fade-in 0.8s ease-in-out forwards;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@keyframes fade-in {
+  0% {
+    @apply translate-y-0 opacity-0;
+  }
+  100% {
+    @apply translate-y-0 opacity-100;
+  }
+}
+.btn {
+  @apply relative w-[300px]  inline-block  text-center text-2xl text-white 
+                  rounded-[10px] px-5 py-1 mt-0 
+                  
+                 transition-all !duration-[600ms] ease-linear;
+  background-image: linear-gradient(
+    45deg,
+    transparent 50%,
+    var(--main_theme_clr) 50%
+  );
+  background-position: 100%;
+  background-size: 400%;
+  border: 1px solid var(--main_theme_clr);
+  &:hover {
+    @apply bg-[0px] text-mainTheme;
+  }
+}
+
+.btn2 {
+  @apply relative text-[22px] font-semibold  text-center  text-mainTheme 
+                  rounded-[10px] px-2.5 py-1 mt-0 
+                  
+                 transition-all !duration-[600ms] ease-linear;
+  background-image: linear-gradient(
+    45deg,
+    var(--main_theme_clr) 50%,
+    transparent 50%
+  );
+  background-position: 100%;
+  background-size: 400%;
+  border: 1px solid var(--main_theme_clr);
+  &:hover {
+    @apply bg-[0px] text-white;
+  }
+}
